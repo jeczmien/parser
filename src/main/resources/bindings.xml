@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jxb:bindings xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb" version="2.1">
+    <jxb:bindings schemaLocation="kursy.xsd">
+        <jxb:bindings node="//xs:element[@name='kurs_kupna']">
+            <jxb:property>
+                <jxb:baseType>
+                    <jxb:javaType name="java.math.BigDecimal"
+                        parseMethod="pl.parser.nbp.xml.BigDecimalParser.parseBigDecimal" printMethod="pl.parser.nbp.xml.BigDecimalParser.printBigDecimal" />
+                </jxb:baseType>
+            </jxb:property>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:element[@name='kurs_sprzedazy']">
+            <jxb:property>
+                <jxb:baseType>
+                    <jxb:javaType name="java.math.BigDecimal"
+                        parseMethod="pl.parser.nbp.xml.BigDecimalParser.parseBigDecimal" printMethod="pl.parser.nbp.xml.BigDecimalParser.printBigDecimal" />
+                </jxb:baseType>
+            </jxb:property>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>
